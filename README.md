@@ -1,63 +1,34 @@
-# Firas Bouraoui — Portfolio
+# Firas Bouraoui - Portfolio
 
-A sleek, animated portfolio built with **Next.js 14**, **TypeScript**, and **TailwindCSS**.
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-18-blue?style=flat&logo=react&logoColor=white)](https://reactjs.org/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-06B6D4?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat&logo=vercel)](https://vercel.com)
 
-## Tech Stack
-- Next.js 14 (App Router)
-- TypeScript
-- TailwindCSS
-- Google Fonts: Syne, DM Sans, JetBrains Mono
+My personal portfolio website showcasing my projects, skills, and experience as a Software Engineering student.
 
-## Local Development
+## 🚀 Live Demo
 
-```bash
-npm install
-npm run dev
-```
+Visit the live site: **[https://firas-bouraoui-portfolio.vercel.app](https://firas-bouraoui-portfolio.vercel.app)**
 
-Open [http://localhost:3000](http://localhost:3000).
+## ✨ Features
 
----
+- 🎨 Modern dark-themed design with gradient accents
+- ⌨️ Typewriter animation for role titles
+- 📱 Fully responsive (mobile, tablet, desktop)
+- 🎯 Dynamic stats counter with animations
+- 📄 Downloadable resume
+- 🔗 Links to GitHub repositories and live demos
+- 🖱️ Smooth scrolling and section reveals
+- ⚡ Optimized performance with Next.js
 
-## Deploy to Vercel (in 3 steps)
+## 🛠️ Tech Stack
 
-### Step 1 — Push to GitHub
-
-```bash
-git init
-git add .
-git commit -m "initial commit"
-# Create a new repo at github.com, then:
-git remote add origin https://github.com/YOUR_USERNAME/portfolio.git
-git push -u origin main
-```
-
-### Step 2 — Import to Vercel
-
-1. Go to [vercel.com](https://vercel.com) and log in (or sign up with GitHub)
-2. Click **"Add New Project"**
-3. Select your `portfolio` repository
-4. Vercel auto-detects Next.js — click **Deploy**
-
-### Step 3 — Done ✓
-
-Your portfolio will be live at `https://your-repo.vercel.app` in ~60 seconds.
-
-### Optional: Custom Domain
-
-In Vercel → Project → Settings → Domains → Add your domain.
-
----
-
-## Customization
-
-| File | What to change |
-|------|---------------|
-| `src/components/Hero.tsx` | Name, bio, stats |
-| `src/components/Experience.tsx` | Job details, achievements |
-| `src/components/Projects.tsx` | Project cards |
-| `src/components/Skills.tsx` | Skill groups |
-| `src/components/Education.tsx` | Degrees |
-| `src/components/Contact.tsx` | Contact links |
-| `src/app/globals.css` | Colors, fonts |
-| `src/app/layout.tsx` | Page title, meta description |
+| Technology | Purpose |
+|------------|---------|
+| Next.js 14 | React framework |
+| TypeScript | Type safety |
+| TailwindCSS | Styling |
+| React | UI components |
+| Vercel | Hosting |
