@@ -65,7 +65,7 @@ export default function Stats() {
         <p className="font-display text-2xl font-bold gradient-text">
           {counts.months}mo
         </p>
-        <p className="font-mono text-xs text-muted mt-0.5">Intern @ CNI</p>
+        <p className="font-mono text-xs text-muted mt-0.5">Exp</p>
       </div>
       <div className="text-center">
         <p className="font-display text-2xl font-bold gradient-text">
