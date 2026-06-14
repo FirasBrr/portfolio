@@ -14,7 +14,7 @@ const skillGroups = [
   {
     label: "Backend",
     icon: "⚙",
-    skills: ["Node.js", "Express.js", "Spring Boot", "Symfony"],
+    skills: ["Node.js", "Express.js", "Spring Boot", "Symfony", "ASP.NET Core"],
   },
   {
     label: "Databases",
