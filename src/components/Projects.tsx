@@ -49,6 +49,17 @@ export const projects = [
     github: "https://github.com/FirasBrr/HealthCareSystem",
     demo: "https://healthcaresystem-1-ndad.onrender.com",
   },
+  {
+  title: "EventHub - Event Management Platform",
+  description:
+    "A full-featured event management web application allowing users to discover, register for, and manage events. Features include interactive maps for event locations, role-based access (Admin/User), event registration with capacity tracking, advanced search/filters, admin dashboard with analytics, and user profile management.",
+  stack: ["ASP.NET Core MVC", "MySQL", "Entity Framework", "Leaflet.js", "Bootstrap", "Chart.js"],
+  icon: "🎯",
+  color: "from-red-500/10 to-blue-500/10",
+  border: "border-red-500/20",
+  accent: "text-red-400",
+  github: "https://github.com/FirasBrr/EventHub",
+},
    {
     title: "Employee Management System (EMS)",
     description:
