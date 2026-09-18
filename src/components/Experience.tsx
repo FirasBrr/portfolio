@@ -3,7 +3,7 @@ import Section from "./Section";
 export const experiences = [
   {
     role: "Software Development Intern",
-    company: "Elco Solution",
+    company: "Elco Solutions",
     location: "Tunis, Tunisia",
     period: "Jun 2026 – Aug 2026",
     icon: "🏭",
@@ -29,7 +29,7 @@ export const experiences = [
     ],
   },
   {
-    role: "Software Engineering Intern",
+    role: "Software Development Intern",
     company: "CNI — National Center of Informatics",
     location: "Tunis, Tunisia",
     period: "Feb 2024 – May 2024",
