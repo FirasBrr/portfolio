@@ -2,9 +2,7 @@
 import { useEffect, useState } from "react";
 import Stats from "./Stats";
 
-const roles = [
-  "Full-Stack Developer"
-];
+const roles = ["Full-Stack Developer"];
 
 export default function Hero() {
   const [roleIdx, setRoleIdx] = useState(0);
@@ -48,11 +46,11 @@ export default function Hero() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          {/* Status badge */}
+          {/* Status badge — emerald (live/active semantic) */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-surface mb-8">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-emerald-400 pulse-success" />
             <span className="font-mono text-xs text-muted">
-              Open To Internships & Part-Time Jobs 
+              Open To Internships &amp; Part-Time Jobs
             </span>
           </div>
 
@@ -67,7 +65,7 @@ export default function Hero() {
           <div className="h-10 flex items-center mb-6">
             <span className="font-mono text-xl text-accent-2">
               {displayed}
-              <span className="animate-pulse">|</span>
+              <span className="animate-pulse text-accent">|</span>
             </span>
           </div>
 
@@ -82,7 +80,7 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4 mb-16">
             <a
               href="#projects"
-              className="px-6 py-3 bg-accent text-white font-display font-semibold text-sm rounded-lg hover:bg-accent/90 transition-all duration-200 hover:shadow-lg hover:shadow-accent/25"
+              className="px-6 py-3 bg-gradient-to-r from-primary-container to-accent-2 text-[#062a3d] font-display font-semibold text-sm rounded-lg hover:opacity-95 transition-all duration-200 shadow-lg shadow-primary-container/25 hover:shadow-primary-container/50"
             >
               View Projects
             </a>
@@ -109,20 +107,20 @@ export default function Hero() {
               className="px-6 py-3 border border-border text-muted font-mono text-xs rounded-lg hover:border-accent/40 hover:text-accent-2 transition-all duration-200 flex items-center gap-2"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M12 3v12m0 0-3-3m3 3 3-3M5 17h14" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M12 3v12m0 0-3-3m3 3 3-3M5 17h14" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               Download Resume
             </a>
           </div>
 
-          {/* Stats row  dynamic! */}
+          {/* Stats row */}
           <Stats />
         </div>
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
           <span className="font-mono text-xs text-muted">scroll</span>
-          <div className="w-px h-12 bg-gradient-to-b from-muted to-transparent" />
+          <div className="w-px h-12 bg-gradient-to-b from-accent/60 to-transparent" />
         </div>
       </div>
     </section>

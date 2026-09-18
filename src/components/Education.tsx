@@ -25,7 +25,7 @@ export default function Education() {
           <div
             key={i}
             className={`glow-border rounded-xl p-6 bg-surface flex flex-col sm:flex-row sm:items-center gap-4 ${
-              e.active ? "border-accent/30" : ""
+              e.active ? "border-emerald-400/30" : ""
             }`}
           >
             <div className="flex-1">
@@ -35,7 +35,7 @@ export default function Education() {
                 </h3>
                 {e.active && (
                   <span className="inline-flex items-center gap-1 font-mono text-xs text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 pulse-success" />
                     current
                   </span>
                 )}

@@ -15,49 +15,61 @@ html {
 }
 
 body {
-  background-color: #0a0a0f;
-  color: #e8e8f0;
+  background-color: #0b0e15;
+  color: #e1e2ec;
   font-family: 'DM Sans', sans-serif;
   overflow-x: hidden;
 }
 
+/* ---------- Scrollbar ---------- */
 ::-webkit-scrollbar {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a0f;
+  background: #0b0e15;
 }
 ::-webkit-scrollbar-thumb {
-  background: #6366f1;
+  background: #38bdf8;
   border-radius: 2px;
 }
+::-webkit-scrollbar-thumb:hover {
+  background: #8ed5ff;
+}
 
+/* ---------- Noise overlay ---------- */
 .noise-bg {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
 }
 
+/* ---------- Gradient text (pure cyan) ---------- */
 .gradient-text {
-  background: linear-gradient(135deg, #a78bfa 0%, #6366f1 50%, #60a5fa 100%);
+  background: linear-gradient(135deg, #bae6fd 0%, #38bdf8 60%, #7bd0ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+/* ---------- Borders & glow (cyan-tinted) ---------- */
 .glow-border {
-  border: 1px solid #1e1e2a;
-  box-shadow: 0 0 0 1px rgba(99,102,241,0.1), inset 0 1px 0 rgba(255,255,255,0.03);
-}
-
-.glow-border:hover {
-  border-color: rgba(99,102,241,0.4);
-  box-shadow: 0 0 20px rgba(99,102,241,0.1), 0 0 0 1px rgba(99,102,241,0.2);
+  border: 1px solid #1e2230;
+  box-shadow:
+    0 0 0 1px rgba(56, 189, 248, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
   transition: all 0.3s ease;
 }
 
+.glow-border:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow:
+    0 0 24px rgba(56, 189, 248, 0.12),
+    0 0 0 1px rgba(56, 189, 248, 0.25);
+}
+
+/* ---------- Skill tags (cyan accent) ---------- */
 .skill-tag {
-  background: rgba(99,102,241,0.08);
-  border: 1px solid rgba(99,102,241,0.2);
-  color: #a78bfa;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  color: #8ed5ff;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.72rem;
   padding: 3px 10px;
@@ -66,21 +78,33 @@ body {
 }
 
 .skill-tag:hover {
-  background: rgba(99,102,241,0.15);
-  border-color: rgba(99,102,241,0.5);
+  background: rgba(56, 189, 248, 0.16);
+  border-color: rgba(56, 189, 248, 0.55);
+  color: #c5e9ff;
 }
 
+/* ---------- Shimmer ---------- */
 @keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 .shimmer {
-  background: linear-gradient(90deg, transparent, rgba(99,102,241,0.15), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(56, 189, 248, 0.15),
+    transparent
+  );
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
 }
 
+/* ---------- Section reveal ---------- */
 .section-enter {
   opacity: 0;
   transform: translateY(30px);
@@ -92,10 +116,11 @@ body {
   transform: translateY(0);
 }
 
+/* ---------- Cursor dot ---------- */
 .cursor-dot {
   width: 8px;
   height: 8px;
-  background: #6366f1;
+  background: #38bdf8;
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
@@ -103,23 +128,53 @@ body {
   transition: transform 0.1s ease;
 }
 
+/* ---------- Nav link ---------- */
 .nav-link {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.8rem;
-  color: #4a4a6a;
+  color: #7b8593;
   transition: color 0.2s ease;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  color: #a78bfa;
+  color: #8ed5ff;
 }
 
+/* ---------- Timeline dot ---------- */
 .timeline-dot {
   width: 8px;
   height: 8px;
-  background: #6366f1;
+  background: #38bdf8;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
   flex-shrink: 0;
+}
+
+/* ---------- Pulsing live indicator (cyan) ---------- */
+.pulse-primary {
+  animation: pulsePrimary 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulsePrimary {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(56, 189, 248, 0);
+  }
+}
+
+/* ---------- Pulsing success indicator (emerald) ---------- */
+.pulse-success {
+  animation: pulseSuccess 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulseSuccess {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(52, 211, 153, 0);
+  }
 }

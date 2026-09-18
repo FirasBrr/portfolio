@@ -2,53 +2,65 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      fontFamily: {
-        mono: ["'JetBrains Mono'", "monospace"],
-        sans: ["'DM Sans'", "sans-serif"],
-        display: ["'Syne'", "sans-serif"],
-      },
       colors: {
-        bg: "#0a0a0f",
-        surface: "#111118",
-        border: "#1e1e2a",
-        accent: "#6366f1",
-        "accent-2": "#a78bfa",
-        muted: "#4a4a6a",
-        dim: "#2a2a3a",
+        /* ---------- Base surfaces (Obsidian) ---------- */
+        bg: "#0b0e15",
+        surface: "#10131a",
+        dim: "#191b23",
+        border: "#1e2230",
+
+        /* ---------- Text ---------- */
+        muted: "#8891a0",
+
+        /* ---------- Primary accent — sky blue (#38BDF8 seed) ---------- */
+        accent: "#38bdf8",
+        "accent-2": "#bae6fd",
+
+        /* ---------- Extended palette ---------- */
+        primary: {
+          DEFAULT: "#8ed5ff",
+          container: "#38bdf8",
+          dim: "#7bd0ff",
+        },
+
+        /* ---------- Semantic status ---------- */
+        success: "#34d399",
+        warning: "#fbbf24",
+        error: "#ffb4ab",
+
+        /* ---------- Container hierarchy ---------- */
+        "surface-lowest": "#0b0e15",
+        "surface-low": "#191b23",
+        "surface-high": "#272a32",
+        "surface-highest": "#32353d",
       },
+
+      fontFamily: {
+        display: ["Syne", "sans-serif"],
+        sans: ["DM Sans", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+      },
+
+      boxShadow: {
+        "glow-primary": "0 0 24px rgba(56, 189, 248, 0.15)",
+        "glow-primary-lg": "0 0 40px rgba(56, 189, 248, 0.25)",
+      },
+
       animation: {
-        "fade-up": "fadeUp 0.6s ease forwards",
-        "fade-in": "fadeIn 0.5s ease forwards",
-        "slide-in": "slideIn 0.5s ease forwards",
-        float: "float 6s ease-in-out infinite",
-        pulse2: "pulse2 3s ease-in-out infinite",
+        "pulse-primary": "pulsePrimary 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
+
       keyframes: {
-        fadeUp: {
-          "0%": { opacity: "0", transform: "translateY(24px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        fadeIn: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        },
-        slideIn: {
-          "0%": { opacity: "0", transform: "translateX(-20px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
-        },
-        float: {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-12px)" },
-        },
-        pulse2: {
-          "0%, 100%": { opacity: "0.4" },
-          "50%": { opacity: "1" },
+        pulsePrimary: {
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(56, 189, 248, 0.6)" },
+          "50%": { boxShadow: "0 0 0 6px rgba(56, 189, 248, 0)" },
         },
       },
     },

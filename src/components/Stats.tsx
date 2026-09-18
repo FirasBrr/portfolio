@@ -1,55 +1,58 @@
 "use client";
 import { useEffect, useState } from "react";
-import { projects } from "./Projects"; 
-
+import { projects } from "./Projects";
+import { experiences } from "./Experience";
 
 export default function Stats() {
   const [counts, setCounts] = useState({ projects: 0, months: 0, certs: 0 });
-  
+
   // Auto-calculate from actual data
-  const projectCount = projects.length; 
-  const internshipMonths = 3; 
-  const certCount = 2; 
+  const projectCount = projects.length;
+  const internshipMonths = experiences.reduce((sum, e) => sum + e.months, 0);
+  const certCount = 2;
 
   useEffect(() => {
     const duration = 1000;
     const stepTime = 20;
     const steps = duration / stepTime;
-    
+
     const targets = {
       projects: projectCount,
       months: internshipMonths,
       certs: certCount,
     };
-    
+
     const increments = {
       projects: targets.projects / steps,
       months: targets.months / steps,
       certs: targets.certs / steps,
     };
-    
+
     let current = { projects: 0, months: 0, certs: 0 };
-    
+
     const timer = setInterval(() => {
       let allComplete = true;
-      
-      Object.keys(current).forEach(key => {
+
+      Object.keys(current).forEach((key) => {
         const k = key as keyof typeof current;
         if (current[k] < targets[k as keyof typeof targets]) {
           allComplete = false;
-          current[k] = Math.min(current[k] + increments[k as keyof typeof increments], targets[k as keyof typeof targets]);
+          current[k] = Math.min(
+            current[k] + increments[k as keyof typeof increments],
+            targets[k as keyof typeof targets]
+          );
         }
       });
-      
+
       setCounts({
         projects: Math.floor(current.projects),
         months: Math.floor(current.months),
         certs: Math.floor(current.certs),
       });
-      
+
       if (allComplete) clearInterval(timer);
     }, stepTime);
-    
+
     return () => clearInterval(timer);
   }, [projectCount, internshipMonths, certCount]);
 

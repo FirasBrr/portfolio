@@ -4,7 +4,7 @@ const skillGroups = [
   {
     label: "Languages",
     icon: "{ }",
-    skills: ["Java", "Python", "JavaScript", "C"],
+    skills: ["Java", "Python", "JavaScript", "C#"],
   },
   {
     label: "Frontend",
@@ -13,24 +13,20 @@ const skillGroups = [
   },
   {
     label: "Backend",
-    icon: "⚙",
+    icon: "⌘",
     skills: ["Node.js", "Express.js", "Spring Boot", "Symfony", "ASP.NET Core"],
   },
   {
     label: "Databases",
-    icon: "◈",
+    icon: "▤",
     skills: ["MySQL", "MongoDB", "PostgreSQL"],
   },
   {
     label: "Tools",
-    icon: "⊡",
-    skills: ["Git", "GitHub", "Postman", "JWT Auth", "Render"],
+    icon: "◇",
+    skills: ["Git", "GitHub", "Postman", "JWT Auth", "Render", "VS Code"],
   },
-  {
-    label: "Certifications",
-    icon: "✦",
-    skills: ["MS Dynamics 365 (CRM)", "Azure AI Fundamentals"],
-  },
+  
 ];
 
 export default function Skills() {
