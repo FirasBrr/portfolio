@@ -44,7 +44,7 @@ export default function Certifications() {
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 flex-wrap mb-1">
-                  <h3 className="font-display font-bold text-white text-sm leading-snug">
+                  <h3 className="font-display font-bold text-ink text-sm leading-snug">
                     {cert.title}
                   </h3>
                   

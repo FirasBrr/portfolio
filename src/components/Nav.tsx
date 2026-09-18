@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "#experience", label: "experience" },
@@ -30,7 +31,7 @@ export default function Nav() {
       <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
         <a
           href="#"
-          className="font-display font-bold text-lg tracking-tight text-white"
+          className="font-display font-bold text-lg tracking-tight text-ink"
         >
           <span className="gradient-text">Firas Bouraoui</span>
           <span className="text-muted ml-1 font-mono text-xs">/ Portfolio</span>
@@ -49,30 +50,34 @@ export default function Nav() {
           >
             hire me
           </a>
+          <ThemeToggle />
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-muted hover:text-white transition-colors"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-            {open ? (
-              <path
-                fillRule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            ) : (
-              <path
-                fillRule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clipRule="evenodd"
-              />
-            )}
-          </svg>
-        </button>
+        {/* Mobile: toggle + menu button */}
+        <div className="md:hidden flex items-center gap-3">
+          <ThemeToggle />
+          <button
+            className="text-muted hover:text-ink transition-colors"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              {open ? (
+                <path
+                  fillRule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              ) : (
+                <path
+                  fillRule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clipRule="evenodd"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}

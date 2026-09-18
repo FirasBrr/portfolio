@@ -75,7 +75,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="font-mono text-xs text-muted">{link.label}</p>
-                <p className="font-display text-sm text-white group-hover:text-accent-2 transition-colors">
+                <p className="font-display text-sm text-ink group-hover:text-accent-2 transition-colors">
                   {link.value}
                 </p>
               </div>

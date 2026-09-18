@@ -26,7 +26,7 @@ export default function Section({
           <div className="flex items-center gap-4 mb-12">
             <span className="font-mono text-xs text-accent">{label}</span>
             <div className="flex-1 h-px bg-border" />
-            <h2 className="font-display text-3xl font-bold text-white">
+            <h2 className="font-display text-3xl font-bold text-ink">
               {title}
             </h2>
           </div>

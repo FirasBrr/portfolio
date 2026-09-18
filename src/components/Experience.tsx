@@ -71,7 +71,7 @@ export default function Experience() {
                     <span className="text-2xl shrink-0 mt-0.5">{exp.icon}</span>
                     <div>
                       <div className="flex items-center gap-2 flex-wrap">
-                        <h3 className="font-display font-bold text-white text-lg">
+                        <h3 className="font-display font-bold text-ink text-lg">
                           {exp.role}
                         </h3>
                         {exp.current && (

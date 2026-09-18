@@ -30,7 +30,7 @@ export default function Education() {
           >
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-1">
-                <h3 className="font-display font-bold text-white text-base">
+                <h3 className="font-display font-bold text-ink text-base">
                   {e.degree}
                 </h3>
                 {e.active && (

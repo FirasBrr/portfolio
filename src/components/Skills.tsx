@@ -40,7 +40,7 @@ export default function Skills() {
           >
             <div className="flex items-center gap-3">
               <span className="font-mono text-accent text-sm">{group.icon}</span>
-              <h3 className="font-display font-semibold text-white text-sm">
+              <h3 className="font-display font-semibold text-ink text-sm">
                 {group.label}
               </h3>
             </div>

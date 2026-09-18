@@ -160,7 +160,7 @@ export default function Projects() {
             {/* ---- Content ---- */}
             <div className="p-5 flex flex-col gap-3 flex-1">
               <div>
-                <h3 className="font-display font-bold text-base text-white mb-2">
+                <h3 className="font-display font-bold text-base text-ink mb-2">
                   {p.title}
                 </h3>
                 <p className="text-muted text-sm leading-relaxed">

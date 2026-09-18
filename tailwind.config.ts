@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: ["selector", '[data-theme="dark"]'],
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,36 +11,37 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        /* ---------- Base surfaces (Obsidian) ---------- */
-        bg: "#0b0e15",
-        surface: "#10131a",
-        dim: "#191b23",
-        border: "#1e2230",
+        /* ---------- Base surfaces ---------- */
+        bg: "rgb(var(--color-bg) / <alpha-value>)",
+        surface: "rgb(var(--color-surface) / <alpha-value>)",
+        dim: "rgb(var(--color-dim) / <alpha-value>)",
+        border: "rgb(var(--color-border) / <alpha-value>)",
 
         /* ---------- Text ---------- */
-        muted: "#8891a0",
+        muted: "rgb(var(--color-muted) / <alpha-value>)",
+        ink: "rgb(var(--color-ink) / <alpha-value>)",
 
-        /* ---------- Primary accent — sky blue (#38BDF8 seed) ---------- */
-        accent: "#38bdf8",
-        "accent-2": "#bae6fd",
+        /* ---------- Primary accent — sky blue ---------- */
+        accent: "rgb(var(--color-accent) / <alpha-value>)",
+        "accent-2": "rgb(var(--color-accent-2) / <alpha-value>)",
 
         /* ---------- Extended palette ---------- */
         primary: {
-          DEFAULT: "#8ed5ff",
-          container: "#38bdf8",
-          dim: "#7bd0ff",
+          DEFAULT: "rgb(var(--color-primary) / <alpha-value>)",
+          container: "rgb(var(--color-primary-container) / <alpha-value>)",
+          dim: "rgb(var(--color-primary-dim) / <alpha-value>)",
         },
 
         /* ---------- Semantic status ---------- */
-        success: "#34d399",
-        warning: "#fbbf24",
-        error: "#ffb4ab",
+        success: "rgb(var(--color-success) / <alpha-value>)",
+        warning: "rgb(var(--color-warning) / <alpha-value>)",
+        error: "rgb(var(--color-error) / <alpha-value>)",
 
         /* ---------- Container hierarchy ---------- */
-        "surface-lowest": "#0b0e15",
-        "surface-low": "#191b23",
-        "surface-high": "#272a32",
-        "surface-highest": "#32353d",
+        "surface-lowest": "rgb(var(--color-surface-lowest) / <alpha-value>)",
+        "surface-low": "rgb(var(--color-surface-low) / <alpha-value>)",
+        "surface-high": "rgb(var(--color-surface-high) / <alpha-value>)",
+        "surface-highest": "rgb(var(--color-surface-highest) / <alpha-value>)",
       },
 
       fontFamily: {

@@ -55,7 +55,7 @@ export default function Hero() {
           </div>
 
           {/* Name */}
-          <h1 className="font-display text-5xl sm:text-7xl font-extrabold text-white leading-[1.05] mb-4">
+          <h1 className="font-display text-5xl sm:text-7xl font-extrabold text-ink leading-[1.05] mb-4">
             Firas
             <br />
             <span className="gradient-text">Bouraoui</span>
@@ -86,7 +86,7 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
-              className="px-6 py-3 border border-border text-white font-display font-semibold text-sm rounded-lg hover:border-accent/50 hover:bg-accent/5 transition-all duration-200"
+              className="px-6 py-3 border border-border text-ink font-display font-semibold text-sm rounded-lg hover:border-accent/50 hover:bg-accent/5 transition-all duration-200"
             >
               Get in Touch
             </a>
